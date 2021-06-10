@@ -23,7 +23,7 @@ public get currentUserValue(): User {
 
   submitUser(userInfo:any):Observable<User>{
     console.log('userHit'+userInfo);
-    return this.http.get<User>(this.baseURL+'api/login?userName='+userInfo.value['userName']+'&password='+userInfo.value['password'])
+    return this.http.get<User>(this.baseURL+'login?userName='+userInfo.value['userName']+'&password='+userInfo.value['password'])
     .pipe(map(user => {
       // login successful if there's a jwt token in the response
       if (user) {
