@@ -27,8 +27,6 @@ logo:string;
 
   userLogin()
   {
-    console.log(this.loginForm);
-  
     this._login.submitUser(this.loginForm).subscribe(s=>{console.log(s);
     s.userType=="N"?  this.router.navigate(['/NurseHome',  s.userId ]):this.router.navigate(['/HospitalHome', s.userId ]);
   }

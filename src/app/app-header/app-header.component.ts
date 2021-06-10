@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../interface/userInterface';
 import { LoginServiceService } from '../services/login-service.service';
 
 @Component({
@@ -9,7 +11,8 @@ import { LoginServiceService } from '../services/login-service.service';
 export class AppHeaderComponent implements OnInit {
   logo:string;
   currentUserName: string | undefined;
-  constructor(private _login:LoginServiceService) {
+  currentUser: User | undefined;
+  constructor(private _login:LoginServiceService,private router: Router) {
     this.logo="../assets/images/Logonew.PNG";
    }
   ngOnInit(): void {
@@ -18,7 +21,15 @@ export class AppHeaderComponent implements OnInit {
 
   refreshUser()
   {
+    this.currentUser=this._login.currentUserValue;
+    if(!this.currentUser.isAuthenticated)
+    {
+      this.router.navigate(['/login'])
+    }
+
     this.currentUserName= this._login.currentUserValue.firstName;
+    
+
   }
 
 }
