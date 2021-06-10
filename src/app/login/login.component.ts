@@ -28,10 +28,9 @@ logo:string;
   userLogin()
   {
     console.log(this.loginForm);
-   const userType="H"
-    userType=="H"?  this.router.navigate(['/NurseHome', 4 ]): this.router.navigate(['/HospitalHome', 4 ]);
+  
     this._login.submitUser(this.loginForm).subscribe(s=>{console.log(s);
-    s.userType=="H"?  this.router.navigate(['/NurseHome',  s.userId ]):this.router.navigate(['/HospitalHome', s.userId ]);
+    s.userType=="N"?  this.router.navigate(['/NurseHome',  s.userId ]):this.router.navigate(['/HospitalHome', s.userId ]);
   }
   );
   }
