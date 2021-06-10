@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class RegistrationService {
   baseURL:string;
   constructor(private http:HttpClient,@Inject('BASE_URL') baseURL:string) { 
-    this.baseURL=baseURL;
+    this.baseURL='http://localhost:8080/nurseschedulingsystem/inse6260/api/';
   }
 
 saveNurseRegistration(userInfo:any):Observable<boolean>

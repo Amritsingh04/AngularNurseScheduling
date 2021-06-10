@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { NurseHomeComponent } from './nurse-home/nurse-home.component';
+import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { NurseHomeComponent } from './nurse-home/nurse-home.component';
     LoginComponent,
     TopBarComponent,
     SideBarComponent,
-    NurseHomeComponent
+    NurseHomeComponent,
+    HospitalHomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,6 @@ header {
     border-bottom: 2px solid black;
     padding: 0 !important; 
     display: flex;
-    background-color: white !important;
+    background-color: #F8F9FD !important;
     align-items: center;
 }
