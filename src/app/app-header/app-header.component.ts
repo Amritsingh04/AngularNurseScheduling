@@ -22,7 +22,7 @@ export class AppHeaderComponent implements OnInit {
   refreshUser()
   {
     this.currentUser=this._login.currentUserValue;
-    if(!this.currentUser.isAuthenticated)
+    if(!this.currentUser.firstName)
     {
       this.router.navigate(['/login'])
     }
