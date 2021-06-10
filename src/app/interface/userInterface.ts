@@ -4,6 +4,8 @@ export interface User {
 	lastName:string;
 	userName:string;
 	email:string;
+	userType:string;
+	isAuthenticated:boolean;
 	password:string;
 	dob:Date;
 	address:string;

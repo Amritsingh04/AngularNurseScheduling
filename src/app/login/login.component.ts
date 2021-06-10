@@ -27,6 +27,12 @@ logo:string;
   userLogin()
   {
     console.log(this.loginForm);
-    this._login.submitUser(this.loginForm);
+    this._login.submitUser(this.loginForm).subscribe(s=>{console.log(s)
+    if(s.userType=="H")
+    {
+      
+    }
+  
+  });
   }
 }

@@ -11,13 +11,17 @@ import { StoreModule } from '@ngrx/store';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { NurseHomeComponent } from './nurse-home/nurse-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    TopBarComponent
+    TopBarComponent,
+    SideBarComponent,
+    NurseHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,22 +32,6 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({}, {}),
-    RouterModule.forRoot([
-
-      {
-       path: '',
-       redirectTo: 'login',
-       pathMatch: 'full',
-     },
-     {
-      path: 'login',
-      component: LoginComponent, pathMatch: 'full'
-    },
-      {
-       path: 'registration',
-       component: RegistrationComponent, pathMatch: 'full'
-     },
-    ]),
 
   ],
   providers: [],

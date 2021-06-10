@@ -14,7 +14,7 @@ constructor(private http:HttpClient,@Inject('BASE_URL') baseURL:string) {
 
   submitUser(userInfo:any):Observable<User>{
     console.log('userHit'+userInfo);
-    return this.http.get<User>(this.baseURL+'UserController/checkGuides/?userName='+userInfo.userName+'&password='+userInfo.password);
+    return this.http.get<User>(this.baseURL+'UserController/checkGuides/?userName='+userInfo.value['userName']+'&password='+userInfo.value['password']);
   }
 
 }
