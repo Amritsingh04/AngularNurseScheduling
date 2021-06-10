@@ -1,0 +1,29 @@
+<header>
+    <div class="col-sm-3" style="width: 400px; margin-left: 15px;">
+        <img style="width: 35%;" [src]="logo" >
+       </div>
+       <div class="col-sm-8">
+       <p style="color: black; font-size: x-large;font-weight: bolder;padding-left: 17%;">Nurse Scheduling System</p>
+        </div>
+       <div class="col-sm-1 profile" >
+        <button class="dd-btn" mat-button [matMenuTriggerFor]="appMenu">
+         {{currentUserName}} <mat-icon>
+            account_circle
+         </mat-icon>
+        </button>
+      </div>
+      <mat-menu #appMenu="matMenu">
+        <a mat-button [routerLink]="'/myProfile'"
+          class="nav-item nav-link"> Edit Profile </a>
+        <a style="cursor: pointer;"
+           class="nav-item nav-link"
+           [routerLink]='["/authentication/logout"]'
+           [state]='{ local: true }' >Logout</a>
+      </mat-menu>
+
+
+    </header>
+
+
+   
+    

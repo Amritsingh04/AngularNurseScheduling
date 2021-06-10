@@ -13,6 +13,7 @@ export class SideBarComponent implements OnInit {
   constructor(private _login:LoginServiceService) { }
 
   ngOnInit(): void {
+    this.refreshUser();
   }
 
   refreshUser()
