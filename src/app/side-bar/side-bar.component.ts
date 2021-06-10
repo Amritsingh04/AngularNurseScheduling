@@ -19,7 +19,7 @@ export class SideBarComponent implements OnInit {
   refreshUser()
   {
     this.currentUser=this._login.currentUserValue;
-    this.isNurse= this.currentUser.userType=="T"?true:false;
+    this.isNurse= this.currentUser.userType=="N"?true:false;
     this.isHospi=this.currentUser.userType=="H"?true:false;
   }
 
