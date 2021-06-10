@@ -1,7 +1,7 @@
 
 <aside >
         
-    <nav>
+    <nav *ngIf="isNurse">
      <a mat-button [routerLink]="'/users'" routerLinkActive="active"><mat-icon>home</mat-icon> Home </a>
      <a mat-button [routerLink]="'/guides'" routerLinkActive="active"><mat-icon>event_note</mat-icon> Availabilities </a>
       <a mat-button [routerLink]="'/admin/category'" routerLinkActive="active"><mat-icon>book</mat-icon> Preferences </a>
