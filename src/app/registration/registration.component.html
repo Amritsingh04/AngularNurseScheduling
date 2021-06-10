@@ -1,0 +1,118 @@
+<app-top-bar></app-top-bar>
+
+<div id="registrationBlock">
+
+
+
+    <mat-card>
+        <mat-card-title style="text-align: center;font-size: xx-large;font-weight: bold;">Registration</mat-card-title>
+    <mat-card-content>
+   <span style="font-size: larger;">Select type of User</span>
+        <mat-form-field appearance="outline">
+            <select #mySelect (change)='modifySelection(mySelect.value)' matNativeControl required>
+                <option *ngFor="let option of options" [value]="option.value" >
+                    {{option.viewValue}}
+                  </option>
+            </select>
+          </mat-form-field>
+        
+    <form *ngIf="flagNurseForm" [formGroup]="registrationNurseForm" (submit)="submitRegistration()">
+      <p>
+        <span style="font-size: larger;">FirstName</span>
+        <mat-form-field appearance="outline"  style="width: 75%;">
+          <mat-label>FirstName</mat-label>
+          <input type="text" matInput formControlName="firstName" placeholder="firstName" >
+        </mat-form-field>
+      </p>
+    
+      <p style="margin-top: -15px !important;margin-left:2px !important">
+        <span style="font-size: larger;">  lastName</span>
+        <mat-form-field appearance="outline" style="width: 75%;">
+          <mat-label>LastName</mat-label>
+          <input type="text" matInput formControlName="lastName" placeholder="lastName" >
+        </mat-form-field>
+      </p>
+
+      <p style="margin-top: -15px !important;margin-left:2px !important">
+        <span style="font-size: larger;">  UserName</span>
+        <mat-form-field appearance="outline" style="width: 75%;">
+          <mat-label>UserName</mat-label>
+          <input type="text" matInput formControlName="userName" placeholder="userName" >
+        </mat-form-field>
+      </p>
+
+      <p style="margin-top: -15px !important;margin-left:2px !important">
+        <span style="font-size: larger;">  Email</span>
+        <mat-form-field appearance="outline" style="width: 75%;">
+          <mat-label>Email</mat-label>
+          <input type="text" matInput formControlName="email" placeholder="email" >
+        </mat-form-field>
+      </p>
+      
+      <p style="margin-top: -15px !important;margin-left:2px !important">
+        <span style="font-size: larger;">  DOB</span>
+        <mat-form-field appearance="outline" style="width: 75%;">
+          <mat-label>DOB</mat-label>
+          <input type="text" matInput formControlName="dob" placeholder="dob" >
+        </mat-form-field>
+      </p>
+
+      <p style="margin-top: -15px !important;margin-left:2px !important">
+        <span style="font-size: larger;">  Address</span>
+        <mat-form-field appearance="outline" style="width: 75%;">
+          <mat-label>Address</mat-label>
+          <input type="text" matInput formControlName="address" placeholder="address" >
+        </mat-form-field>
+      </p>
+
+      <div class="button" style="float: right;">
+        <button class="btn" style="background-color: #3F50B5;color:white" type="submit" mat-button>Submit</button>
+      </div>
+    
+    </form>
+
+
+    <form *ngIf="flagHospitalForm" [formGroup]="registrationHospitalForm" (submit)="submitRegistrationHospital()">
+        <p>
+          <span style="font-size: larger;">Hospital Name</span>
+          <mat-form-field appearance="outline"  style="width: 75%;">
+            <mat-label>Hospital Name</mat-label>
+            <input type="text" matInput formControlName="hospitalName" placeholder="hospitalName" >
+          </mat-form-field>
+        </p>
+      
+  
+        <p style="margin-top: -15px !important;margin-left:2px !important">
+          <span style="font-size: larger;">  UserName</span>
+          <mat-form-field appearance="outline" style="width: 75%;">
+            <mat-label>UserName</mat-label>
+            <input type="text" matInput formControlName="userName" placeholder="userName" >
+          </mat-form-field>
+        </p>
+  
+        <p style="margin-top: -15px !important;margin-left:2px !important">
+          <span style="font-size: larger;">  Email</span>
+          <mat-form-field appearance="outline" style="width: 75%;">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput formControlName="email" placeholder="email" >
+          </mat-form-field>
+        </p>
+        
+  
+        <p style="margin-top: -15px !important;margin-left:2px !important">
+          <span style="font-size: larger;">  Address</span>
+          <mat-form-field appearance="outline" style="width: 75%;">
+            <mat-label>Address</mat-label>
+            <input type="text" matInput formControlName="address" placeholder="address" >
+          </mat-form-field>
+        </p>
+  
+        <div class="button" style="float: right;">
+          <button class="btn" style="background-color: #3F50B5;color:white" type="submit" mat-button>Submit</button>
+        </div>
+      
+      </form>
+
+    </mat-card-content>
+    </mat-card>
+    </div>

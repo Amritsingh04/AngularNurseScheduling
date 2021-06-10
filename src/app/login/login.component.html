@@ -1,0 +1,39 @@
+<div id="homeBlock">
+<mat-card>
+    <mat-card-title style="text-align: center;font-size: xx-large;font-weight: bold;">Login</mat-card-title>
+<mat-card-content>
+<div style="width: 450px;margin-top: 15px;">
+ <img style="width: 100%;" [src]="logo" >
+</div>
+<form [formGroup]="loginForm" (submit)="userLogin()">
+  <p>
+    <span style="font-size: larger;">UserName</span>
+    <mat-form-field appearance="outline"  style="width: 75%;">
+      <mat-label>UserName</mat-label>
+      <input type="text" matInput formControlName="userName" placeholder="Username" >
+    </mat-form-field>
+  </p>
+
+  <p style="margin-top: -15px !important;margin-left:2px !important">
+    <span style="font-size: larger;">  Password</span>
+    <mat-form-field appearance="outline" style="width: 75%;">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" placeholder="Password" >
+    </mat-form-field>
+  </p>
+
+  <!-- <p *ngIf="error" class="error">
+  
+  </p> -->
+<p>
+  <span style="font-size: larger;"> New to the System? <a routerLink="/registration" routerLinkActive="active" style="cursor: pointer;color: blue;">Click here</a>
+  </span>
+  </p>
+  <div class="button" style="float: right;">
+    <button class="btn" style="background-color: #3F50B5;color:white" type="submit" mat-button>Login</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>
+</div>
