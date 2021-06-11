@@ -1,0 +1,11 @@
+#homeBlock
+{
+    display:grid;
+    position: absolute;
+    top: 28%;
+    left: 37%;
+    margin-top: -50px;
+    margin-left: -50px;
+    border:2px solid black;
+    border-radius: 1%;
+}

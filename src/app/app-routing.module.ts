@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { NurseHomeComponent } from './nurse-home/nurse-home.component';
 import { RegistrationComponent } from './registration/registration.component';
 
@@ -15,6 +16,10 @@ const routes: Routes = [
    path: 'login',
    component: LoginComponent, pathMatch: 'full'
  },
+ {
+  path: 'logout',
+  component: LogoutComponent, pathMatch: 'full'
+},
    {
     path: 'registration',
     component: RegistrationComponent, pathMatch: 'full'

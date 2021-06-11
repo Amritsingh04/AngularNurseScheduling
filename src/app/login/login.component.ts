@@ -27,9 +27,10 @@ logo:string;
 
   userLogin()
   {
-    this._login.submitUser(this.loginForm).subscribe(s=>{console.log(s);
-    s.userType=="N"?  this.router.navigate(['/NurseHome',  s.userId ]):this.router.navigate(['/HospitalHome', s.userId ]);
-  }
-  );
+    this.router.navigate(['/NurseHome',  4 ]);
+   // this._login.submitUser(this.loginForm).subscribe(s=>{console.log(s);
+   // s.userType=="N"?  this.router.navigate(['/NurseHome',  s.userId ]):this.router.navigate(['/HospitalHome', s.userId ]);
+ // }
+ // );
   }
 }
