@@ -19,14 +19,16 @@ export class RegistrationComponent implements OnInit {
     userName:[null,Validators.required],
     email:[null,Validators.required],
     dob:[null,Validators.required],
-    address:[null,Validators.required]
+    address:[null,Validators.required],
+    password:[null,Validators.required]
   });
 
   registrationHospitalForm=this.fb.group({
     hospitalName:[null,Validators.required],
     userName:[null,Validators.required],
     email:[null,Validators.required],
-    address:[null,Validators.required]
+    address:[null,Validators.required],
+    password:[null,Validators.required]
   });
 
   options: userType[] = [
@@ -36,7 +38,7 @@ export class RegistrationComponent implements OnInit {
   ];
 
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private _register:RegistrationService) { }
 
   ngOnInit(): void {
   }
@@ -52,11 +54,13 @@ export class RegistrationComponent implements OnInit {
   submitRegistration()
   {
     console.log(this.registrationNurseForm);
-
+    this._register.saveNurseRegistration(this.registrationNurseForm).subscribe(s=>console.log(s));
+    
   }
 
   submitRegistrationHospital()
   {
     console.log(this.registrationHospitalForm);
+    this._register.saveHospitalRegistration(this.registrationHospitalForm).subscribe(s=>console.log(s));
   }
 }

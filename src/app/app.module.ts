@@ -15,6 +15,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { NurseHomeComponent } from './nurse-home/nurse-home.component';
 import { HospitalHomeComponent } from './hospital-home/hospital-home.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
     NurseHomeComponent,
     HospitalHomeComponent,
     AppHeaderComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,8 @@ saveNurseRegistration(userInfo:any):Observable<boolean>
       email:userInfo.value['email'],
       userName:userInfo.value['userName'],
       dob:userInfo.value['dob'],
-      address:userInfo.value['address']
+      address:userInfo.value['address'],
+      password:userInfo.value['password']
   });
 }
 
@@ -35,7 +36,8 @@ saveHospitalRegistration(userInfo:any):Observable<boolean>
       hospitalName:userInfo.value['hospitalName'],
       email:userInfo.value['email'],
       userName:userInfo.value['userName'],
-      address:userInfo.value['address']
+      address:userInfo.value['address'],
+      password:userInfo.value['password']
   });
 }
 
